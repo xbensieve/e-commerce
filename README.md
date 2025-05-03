@@ -1,54 +1,105 @@
-# React + TypeScript + Vite
+# E-commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based e-commerce store built with TypeScript and Vite. It features a modern UI, routing, and dynamic product listings using Ant Design components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19**: Built with the latest version of React for modern development.
+- **TypeScript**: Strongly typed codebase for better maintainability.
+- **Vite**: Lightning-fast development environment.
+- **Ant Design**: Pre-styled UI components for a professional look.
+- **React Router**: Client-side routing for seamless navigation.
+- **Responsive Design**: Optimized for all screen sizes.
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+ecommerce/
+├── public/               # Static assets
+├── src/                  # Source code
+│   ├── components/       # Reusable components
+│   ├── pages/            # Page components
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # Entry point
+│   ├── index.css         # Global styles
+│   └── App.css           # App-specific styles
+├── .gitignore            # Ignored files for Git
+├── package.json          # Project dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite configuration
+└── README.md             # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/xbensieve/e-commerce.git
+   cd ecommerce
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+### Development
+
+Start the development server:
+
+```sh
+npm run dev
 ```
+
+Open your browser and navigate to `http://localhost:5173`.
+
+### Build
+
+To build the project for production:
+
+```sh
+npm run build
+```
+
+### Linting
+
+Run ESLint to check for code quality:
+
+```sh
+npm run lint
+```
+
+### Preview
+
+Preview the production build:
+
+```sh
+npm run preview
+```
+
+## Technologies Used
+
+- **React**: Frontend library
+- **TypeScript**: Type-safe JavaScript
+- **Vite**: Build tool
+- **Ant Design**: UI components
+- **ESLint**: Linting and code quality
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgments
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Ant Design](https://ant.design/)
